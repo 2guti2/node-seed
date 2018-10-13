@@ -1,0 +1,21 @@
+{
+  "name": "node-seed",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "sudo nodemon index.js",
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "awilix": "^3.0.9",
+    "awilix-express": "^1.1.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.4",
+    "standard": "^12.0.1"
+  }
+}
