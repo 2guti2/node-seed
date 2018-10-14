@@ -1,5 +1,5 @@
 let config = {}
-const server = require('./express')
+const server = require('./server')
 const errorMiddleware = require('./errorMiddleware')
 
 config.init = (container, routes) => {
