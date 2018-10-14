@@ -4,10 +4,11 @@ const wrapAsync = require('../wrapAsync')
 
 const API = ({ peopleService }) => ({
   getPeople: wrapAsync(async (req, res) => {
+    console.log(req.params.id)
     res.send(await peopleService.getPeople())
   })
 })
 
 module.exports = createController(API)
   .before([auth])
-  .get('/people', 'getPeople')
+  .get('/people/:id', 'getPeople')
