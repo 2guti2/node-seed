@@ -1,6 +1,5 @@
 let config = {}
 const server = require('./express')
-const fs = require('./fs')
 const errorMiddleware = require('./errorMiddleware')
 
 config.init = (container, routes) => {
@@ -9,7 +8,8 @@ config.init = (container, routes) => {
 }
 
 config.startServer = () => {
-  fs.getPort(startServerOnPort)
+  let port = process.env.PORT
+  startServerOnPort(port)
 }
 
 function startServerOnPort (port) {
