@@ -1,4 +1,4 @@
-module.exports = function authenticate (req, res, next) {
+module.exports = function auth (req, res, next) {
   console.log(req.headers)
   next()
 }

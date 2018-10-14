@@ -1,5 +1,5 @@
 const { createController } = require('awilix-express')
-const authenticate = require('../auth')
+const auth = require('../auth')
 const wrapAsync = require('../wrapAsync')
 
 const API = ({ peopleService }) => ({
@@ -9,5 +9,5 @@ const API = ({ peopleService }) => ({
 })
 
 module.exports = createController(API)
-  .before([authenticate])
+  .before([auth])
   .get('/people', 'getPeople')
