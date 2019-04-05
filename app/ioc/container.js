@@ -1,6 +1,6 @@
 const { asClass, createContainer, Lifetime } = require('awilix')
 const { scopePerRequest } = require('awilix-express')
-const repo = require('./repo')
+const repo = require('../db/repo')
 
 const container = createContainer()
 
@@ -10,7 +10,7 @@ container.register({
 
 container.loadModules(
   [
-    [`${__dirname}/*/*.service.js`, { register: asClass }]
+    [`${__dirname}/../*/*.service.js`, { register: asClass }]
   ],
   {
     formatName: 'camelCase',

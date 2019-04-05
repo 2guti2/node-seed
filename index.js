@@ -1,3 +1,3 @@
 require('dotenv').config()
-const app = require('./app/app')
+const app = require('./app')
 app.start()

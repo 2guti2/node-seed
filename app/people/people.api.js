@@ -1,11 +1,10 @@
 const { createController } = require('awilix-express')
-const auth = require('../auth')
-const wrapAsync = require('../wrapAsync')
+const auth = require('../middleware/auth')
+const wrapAsync = require('../middleware/wrapAsync')
 
 const API = ({ peopleService }) => ({
   getPeople: wrapAsync(async (req, res) => {
-    console.log(req.params.id)
-    res.send(await peopleService.getPeople())
+    res.send(await peopleService.getPerson(+req.params.id))
   })
 })
 
